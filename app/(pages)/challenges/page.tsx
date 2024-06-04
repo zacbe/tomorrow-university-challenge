@@ -1,3 +1,5 @@
+'use client';
+
 import ChallengeTable from '@/app/components/ChallengeTable';
 
 export default function Challenges() {

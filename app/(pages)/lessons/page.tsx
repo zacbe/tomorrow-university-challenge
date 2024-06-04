@@ -1,3 +1,5 @@
+'use client';
+
 import LessonTable from '@/app/components/LessonTable';
 
 export default function Lessons() {
