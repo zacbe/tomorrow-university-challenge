@@ -10,3 +10,17 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
+
+  nextjs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: nextjs
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+    environment:
+      - MONGODB_URI=mongodb://root:example@mongodb:27017
+    depends_on:
+      - mongodb
