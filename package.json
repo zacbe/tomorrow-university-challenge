@@ -8,9 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "clean": "rm -rf .next",
-    "initDB": "tsx ./scripts/initDB.ts",
-    "compose": "docker-compose up -d",
-    "compose-down": "docker-compose down"
+    "seed": "tsx ./scripts/initDB.ts",
+    "compose:up": "docker-compose up -d",
+    "compose:down": "docker-compose down"
   },
   "dependencies": {
     "mongodb": "^6.7.0",
