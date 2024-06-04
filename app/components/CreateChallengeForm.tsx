@@ -1,10 +1,10 @@
-'use client';
-
 import { useState, useEffect } from 'react';
-import ReactQuill from 'react-quill';
-import 'react-quill/dist/quill.snow.css';
+import dynamic from 'next/dynamic';
 import { findAllLessons } from '@/app/actions/lessons';
 import SuccessMessage from './SuccessMessage';
+
+const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
+import 'react-quill/dist/quill.snow.css';
 
 type CreateChallengeFormProps = {
   onSave: (challenge: {
